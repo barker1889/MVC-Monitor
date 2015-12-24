@@ -9,7 +9,7 @@ MVC Monitor can receive errors through the popular error catching tools ELMAH an
 
 <h4>Do I need to modify my applications?</h4>
 
-As you've probably guessed, you will need to install ELMAH and ElmahR into you MVC applications. But don't fret, it's really straight forward and only involves a nuget install and some extra config settings. See the section at the end of the readme for a step by step guide to get your application barfing out it's unhandled exceptions to the monitor.
+As you've probably guessed, you will need to install ELMAH and ElmahR into you MVC applications.
 
 <h4>Sorted, so how do I start the monitor?</h4>
 
@@ -51,3 +51,10 @@ And that's it! Rebuild you application and make it throw an unhandled exception.
 
 It's worth noting that this is only a basic install of ELMAH, including receiving notifications via Prowl and setting up filters to stop certain errors getting posted. See the wiki for details https://code.google.com/p/elmah/w/list 
 
+<h4>Roadmap</h4>
+* Application keys to prevent unauthorized applications posting to your monitor
+* User Login/Auth
+* Install as a windows service
+* Update MVC and use web API controllers + all angular front end
+* SQL Repository + update database to use indexable field types
+* Responsive layout
