@@ -10,7 +10,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
 {
     [TestFixture]
-    [Ignore("Only required if using NHibernate Repository")]
+    [Category("NHibernateRepository")]
     public class GetTests
     {
         private readonly List<ErrorModel> _testDataErrors = new List<ErrorModel>();

@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
 {
     [TestFixture]
-    [Ignore("Only required if using NHibernate Repository")]
+    [Category("NHibernateRepository")]
     public class AddTests
     {
         private ISessionFactory _sessionFactory;

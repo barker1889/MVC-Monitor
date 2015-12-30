@@ -9,6 +9,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Processor
 {
     [TestFixture]
+    [Category("Core")]
     public class ElmahErrorProcessorTests
     {
         private Mock<IErrorModelFactory> _mockErrorModelFactory;

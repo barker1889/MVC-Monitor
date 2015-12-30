@@ -10,6 +10,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Providers.SummaryProviderTests
 {
     [TestFixture]
+    [Category("Core")]
     public class GetTotalErrorCountTests
     {
         private Mock<IErrorRepository> _mockErrorRepository;
@@ -60,6 +61,7 @@ namespace MvcMonitor.Tests.Providers.SummaryProviderTests
     }
 
     [TestFixture]
+    [Category("Core")]
     public class GetTotalErrorCountForApplicationTests
     {
         private Mock<IErrorRepository> _mockErrorRepository;

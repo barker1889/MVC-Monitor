@@ -10,6 +10,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.ErrorHubTests
 {
     [TestFixture]
+    [Category("Core")]
     public class GetPagedErrorsTests
     {
         private Mock<IIndexProviderFactory> _mockIndexProviderFactory;
@@ -75,6 +76,7 @@ namespace MvcMonitor.Tests.ErrorHubTests
     [TestFixture("")]
     [TestFixture((string)null)]
     [TestFixture("INVALID_$GG09gegRGjw9rs££56")]
+    [Category("Core")]
     public class GetPagedErrorsWithNoDateFilterTests
     {
         private readonly string _emptyDateField;

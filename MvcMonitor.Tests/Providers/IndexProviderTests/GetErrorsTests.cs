@@ -9,6 +9,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Providers.IndexProviderTests
 {
     [TestFixture]
+    [Category("Core")]
     public class GetErrorsTests
     {
         private Mock<IErrorRepositoryFactory> _mockErrorRepositoryFactory;

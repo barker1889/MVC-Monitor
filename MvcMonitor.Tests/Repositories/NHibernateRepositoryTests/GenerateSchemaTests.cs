@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
 {
     [TestFixture]
-    [Ignore("Run if using NHibernate repository")]
+    [Category("NHibernateRepository")]
     public class GenerateSchemaTests
     {
         [Test]

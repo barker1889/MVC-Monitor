@@ -12,6 +12,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Providers.SummaryProviderTests
 {
     [TestFixture]
+    [Category("Core")]
     public class GetErrorLocationsForApplicationTests
     {
         private Mock<IErrorRepository> _mockErrorRepository;
@@ -82,6 +83,7 @@ namespace MvcMonitor.Tests.Providers.SummaryProviderTests
     }
 
     [TestFixture]
+    [Category("Core")]
     public class GetErrorLocationsForApplicationWithNoLocalLocationsTests
     {
         private Mock<IErrorRepository> _mockErrorRepository;

@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace MvcMonitor.Tests.Models
 {
+
     public class StatusCodeFactoryTests
     {
         [TestCase("200", HttpStatusCode.OK)]
@@ -12,6 +13,7 @@ namespace MvcMonitor.Tests.Models
         [TestCase("", HttpStatusCode.Unused)]
         [TestCase(null, HttpStatusCode.Unused)]
         [TestCase("53452324", (HttpStatusCode)53452324)]
+        [Category("Core")]
         public void WhenCreatingStatusCode(string input, HttpStatusCode expectedOutput)
         {
             var result = new StatusCodeFactory().Create(input);
