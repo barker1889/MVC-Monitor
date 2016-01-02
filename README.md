@@ -53,10 +53,10 @@ It's worth noting that this is only a basic install of ELMAH, including receivin
 
 <h4>Roadmap</h4>
 * Application keys to prevent unauthorized applications posting to your monitor
+* Install as a self hosted API in a windows service and consume from the MVC website
 * User Login/Auth
-* Install as a windows service as well as MVC website
 * Update MVC and use web API controllers + all angular front end
-* Replace NHibernate repository with raw SQL repository + update database to use indexable field types
 * Responsive layout
 * Reskin + use SASS to create theme sheet
 * Install scripts
+* Component to replace EmlahR error post module
