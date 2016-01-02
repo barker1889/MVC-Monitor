@@ -60,3 +60,4 @@ It's worth noting that this is only a basic install of ELMAH, including receivin
 * Reskin + use SASS to create theme sheet
 * Install scripts
 * Component to replace EmlahR error post module
+* Owin middleware component for posting errors
