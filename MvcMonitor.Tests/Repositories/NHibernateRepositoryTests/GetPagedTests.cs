@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using MvcMonitor.Data.Repositories;
+using MvcMonitor.Data.Repositories.NHibernate;
 using MvcMonitor.Models;
 using MvcMonitor.Utilities;
 using NUnit.Framework;
@@ -34,7 +35,7 @@ namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
         {
             foreach (var error in _testDataErrors)
             {
-                using (var session = NHibernateHelper.OpenSession())
+                using (var session = SessionHelper.OpenSession())
                 {
                     using (var transaction = session.BeginTransaction())
                     {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using MvcMonitor.Data.Repositories;
+using MvcMonitor.Data.Repositories.NHibernate;
 using MvcMonitor.Models;
 using NHibernate;
 using NHibernate.Cfg;

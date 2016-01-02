@@ -27,19 +27,27 @@ namespace MvcMonitor.HttpHandlers
 
         public override void ProcessRequest(HttpContextBase context)
         {
-            var errorId = context.Request.Params["errorId"];
-            var sourceApplication = context.Request.Params["sourceId"];
-            var infoUrl = context.Request.Params["infoUrl"];
-            var errorDetails = context.Request.Params["error"];
-
-            if (!_applications.Any(app => app.Equals(sourceApplication, StringComparison.OrdinalIgnoreCase)))
+            try
             {
-                return;
+                var errorId = context.Request.Params["errorId"];
+                var sourceApplication = context.Request.Params["sourceId"];
+                var infoUrl = context.Request.Params["infoUrl"];
+                var errorDetails = context.Request.Params["error"];
+
+                if (!_applications.Any(app => app.Equals(sourceApplication, StringComparison.OrdinalIgnoreCase)))
+                {
+                    return;
+                }
+
+                var errorDto = _elmahErrorDtoFactory.Create(errorId, sourceApplication, infoUrl, errorDetails);
+
+                _errorProcessor.ProcessElmahError(errorDto);    
             }
-
-            var errorDto = _elmahErrorDtoFactory.Create(errorId, sourceApplication, infoUrl, errorDetails);
-
-            _errorProcessor.ProcessElmahError(errorDto);           
+            catch (Exception exc)
+            {
+                Logger.Log.Error("There was an error processing the request", exc);
+                throw;
+            }
         }
     }
 }

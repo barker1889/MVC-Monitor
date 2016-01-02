@@ -1,9 +1,9 @@
 using MvcMonitor.Models;
 using NHibernate;
 
-namespace MvcMonitor.Utilities
+namespace MvcMonitor.Data.Repositories.NHibernate
 {
-    public class NHibernateHelper
+    public class SessionHelper
     {
         private static ISessionFactory _sessionFactory;
 
@@ -13,7 +13,7 @@ namespace MvcMonitor.Utilities
             {
                 if (_sessionFactory == null)
                 {
-                    var configuration = new NHibernate.Cfg.Configuration();
+                    var configuration = new global::NHibernate.Cfg.Configuration();
                     configuration.Configure();
                     configuration.AddAssembly(typeof(ErrorModel).Assembly);
                     _sessionFactory = configuration.BuildSessionFactory();
