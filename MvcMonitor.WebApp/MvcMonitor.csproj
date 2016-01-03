@@ -200,6 +200,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Repositories\NHibernate\ModelHelper.cs" />
     <Compile Include="Data\Repositories\NHibernate\SessionHelper.cs" />
     <Compile Include="ErrorHandling\IErrorDataFactory.cs" />
     <Compile Include="Logger.cs" />

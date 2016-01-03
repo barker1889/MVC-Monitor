@@ -80,7 +80,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repositories\NHibernateRepositoryTests\GenerateSchemaTests.cs" />
     <Compile Include="ErrorHubTests\GetApplicationErrorSummaryTests.cs" />
     <Compile Include="ErrorHubTests\GetErrorLocationsTests.cs" />
     <Compile Include="ErrorHubTests\GetPagedErrorsTests.cs" />

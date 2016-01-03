@@ -14,6 +14,8 @@ namespace MvcMonitor.Data.Repositories.NHibernate
 
         public void Add(ErrorModel error)
         {
+            ModelHelper.Truncate(error);
+
             using (var session = SessionHelper.OpenSession())
             {
                 using (var transaction = session.BeginTransaction())
