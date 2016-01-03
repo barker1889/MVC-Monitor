@@ -52,12 +52,10 @@ And that's it! Rebuild you application and make it throw an unhandled exception.
 It's worth noting that this is only a basic install of ELMAH, including receiving notifications via Prowl and setting up filters to stop certain errors getting posted. See the wiki for details https://code.google.com/p/elmah/w/list 
 
 <h4>Roadmap</h4>
-* Application keys to prevent unauthorized applications posting to your monitor
-* Install as a self hosted API in a windows service and consume from the MVC website
-* User Login/Auth
 * Update MVC and use web API controllers + all angular front end
-* Responsive layout
-* Reskin + use SASS to create theme sheet
+* User Login/Auth
+* Application keys to prevent unauthorized applications posting to your monitor
+* Responsive layout + Reskin using SASS to create theme sheet
 * Install scripts
 * Component to replace EmlahR error post module
 * Owin middleware component for posting errors
