@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using MvcMonitor.Data.Repositories;
-using MvcMonitor.Data.Repositories.NHibernate;
-using MvcMonitor.Models;
-using MvcMonitor.Utilities;
+using MvcMonitor.Api.Data.Repositories;
+using MvcMonitor.Api.Data.Repositories.NHibernate;
+using MvcMonitor.Api.Models;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
@@ -84,8 +83,7 @@ namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
         [Test]
         public void ThenGetWithLocationFilterReturnsCorrectErrors()
         {
-            var errors = _repository.GetPaged(1, 1, _testDataErrors[5].Time, _testDataErrors[0].Time, null, null,
-                                              "file1.cs");
+            var errors = _repository.GetPaged(1, 1, _testDataErrors[5].Time, _testDataErrors[0].Time, null, null, "file1.cs");
 
             Assert.That(errors.TotalCount, Is.EqualTo(4));
             Assert.That(errors.Items.Count(), Is.EqualTo(1));

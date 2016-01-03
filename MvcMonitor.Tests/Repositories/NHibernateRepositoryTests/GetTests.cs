@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using MvcMonitor.Data.Repositories;
-using MvcMonitor.Data.Repositories.NHibernate;
-using MvcMonitor.Models;
-using MvcMonitor.Utilities;
+using MvcMonitor.Api.Data.Repositories;
+using MvcMonitor.Api.Data.Repositories.NHibernate;
+using MvcMonitor.Api.Models;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests

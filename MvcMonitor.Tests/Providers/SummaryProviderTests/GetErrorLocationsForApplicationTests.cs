@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Moq;
-using MvcMonitor.Data.Providers;
-using MvcMonitor.Data.Repositories;
-using MvcMonitor.Models;
-using MvcMonitor.StackTrace;
-using MvcMonitor.Utilities;
+using MvcMonitor.Api.Data.Providers;
+using MvcMonitor.Api.Data.Repositories;
+using MvcMonitor.Api.Models;
+using MvcMonitor.Api.StackTrace;
+using MvcMonitor.Api.Utilities;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.Providers.SummaryProviderTests

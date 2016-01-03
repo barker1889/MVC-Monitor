@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Net;
-using MvcMonitor.Data.Repositories;
-using MvcMonitor.Data.Repositories.NHibernate;
-using MvcMonitor.Models;
+using MvcMonitor.Api.Data.Repositories.NHibernate;
+using MvcMonitor.Api.Models;
 using NHibernate;
 using NHibernate.Cfg;
 using NUnit.Framework;

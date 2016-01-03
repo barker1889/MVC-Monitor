@@ -1,5 +1,5 @@
-﻿using MvcMonitor.Models;
-using MvcMonitor.Models.Factories;
+﻿using MvcMonitor.Api.Models;
+using MvcMonitor.Api.Models.Factories;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.Models

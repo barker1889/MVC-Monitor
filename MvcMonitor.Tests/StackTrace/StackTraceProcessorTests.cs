@@ -1,5 +1,5 @@
-﻿using MvcMonitor.Models;
-using MvcMonitor.StackTrace;
+﻿using MvcMonitor.Api.Models;
+using MvcMonitor.Api.StackTrace;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.StackTrace

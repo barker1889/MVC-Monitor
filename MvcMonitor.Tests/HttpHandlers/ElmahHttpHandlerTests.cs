@@ -2,10 +2,10 @@
 using System.Collections.Specialized;
 using System.Web;
 using Moq;
-using MvcMonitor.ErrorHandling;
-using MvcMonitor.HttpHandlers;
-using MvcMonitor.Models;
-using MvcMonitor.Models.Factories;
+using MvcMonitor.Api.ErrorHandling;
+using MvcMonitor.Api.HttpHandlers;
+using MvcMonitor.Api.Models;
+using MvcMonitor.Api.Models.Factories;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.HttpHandlers

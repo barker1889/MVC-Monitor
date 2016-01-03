@@ -1,9 +1,9 @@
 ﻿using Moq;
-using MvcMonitor.Broadcaster;
-using MvcMonitor.Data.Repositories;
-using MvcMonitor.ErrorHandling;
-using MvcMonitor.Models;
-using MvcMonitor.Models.Factories;
+using MvcMonitor.Api.Broadcaster;
+using MvcMonitor.Api.Data.Repositories;
+using MvcMonitor.Api.ErrorHandling;
+using MvcMonitor.Api.Models;
+using MvcMonitor.Api.Models.Factories;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.Processor

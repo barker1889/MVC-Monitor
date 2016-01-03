@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Net;
 using Moq;
-using MvcMonitor.Models;
-using MvcMonitor.Models.Factories;
-using MvcMonitor.StackTrace;
+using MvcMonitor.Api.Models;
+using MvcMonitor.Api.Models.Factories;
+using MvcMonitor.Api.StackTrace;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.Models

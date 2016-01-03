@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Moq;
-using MvcMonitor.Data.Providers;
-using MvcMonitor.Data.Providers.Factories;
-using MvcMonitor.ErrorHandling;
-using MvcMonitor.Models;
+using MvcMonitor.Api.Data.Providers;
+using MvcMonitor.Api.Data.Providers.Factories;
+using MvcMonitor.Api.ErrorHandling;
+using MvcMonitor.Api.Models;
 using NUnit.Framework;
 
 namespace MvcMonitor.Tests.ErrorHubTests
