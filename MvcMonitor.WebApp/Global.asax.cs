@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using Microsoft.AspNet.SignalR;
 
 namespace MvcMonitor
 {
@@ -8,7 +9,10 @@ namespace MvcMonitor
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            RouteTable.Routes.MapHubs();
+            RouteTable.Routes.MapHubs(new HubConfiguration()
+                                      {
+                                          EnableCrossDomain = MonitorConfiguration.EnableSignalrCrossDomain
+                                      });
         }
     }
 }

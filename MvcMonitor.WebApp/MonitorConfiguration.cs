@@ -14,6 +14,7 @@ namespace MvcMonitor
             Applications = GetConfiguredApplicationIds();
 
             ErrorRepository = ConfigurationManager.AppSettings["ErrorRepository"];
+            EnableSignalrCrossDomain = bool.Parse(ConfigurationManager.AppSettings["EnableSignalrCrossDomain"]);
         }
 
         private static List<string> GetConfiguredApplicationIds()
@@ -28,5 +29,7 @@ namespace MvcMonitor
         public static List<string> Applications { get; private set; }
 
         public static string ErrorRepository { get; private set; }
+
+        public static bool EnableSignalrCrossDomain { get; set; }
     }
 }
