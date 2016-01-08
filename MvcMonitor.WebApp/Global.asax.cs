@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using log4net.Config;
+using Microsoft.AspNet.SignalR;
 
 namespace MvcMonitor
 {
@@ -14,7 +15,10 @@ namespace MvcMonitor
             try
             {
                 AreaRegistration.RegisterAllAreas();
-                RouteTable.Routes.MapHubs();
+                RouteTable.Routes.MapHubs(new HubConfiguration()
+                {
+                    EnableCrossDomain = MonitorConfiguration.EnableSignalrCrossDomain
+                });
             }
             catch (Exception exc)
             {
