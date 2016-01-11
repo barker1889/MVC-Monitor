@@ -10,6 +10,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Providers.SummaryProviderTests
 {
     [TestFixture]
+    [Category("Core")]
     public class GetLatestTests
     {
         private Mock<IErrorRepository> _mockErrorRepository;
@@ -54,6 +55,7 @@ namespace MvcMonitor.Tests.Providers.SummaryProviderTests
     }
 
     [TestFixture]
+    [Category("Core")]
     public class GetLatestWhenNoErrorsExistTests
     {
         private Mock<IErrorRepository> _mockErrorRepository;
@@ -95,6 +97,7 @@ namespace MvcMonitor.Tests.Providers.SummaryProviderTests
 
 
     [TestFixture]
+    [Category("Core")]
     public class GetLatestForApplicationTests
     {
         private Mock<IErrorRepository> _mockErrorRepository;
@@ -142,6 +145,7 @@ namespace MvcMonitor.Tests.Providers.SummaryProviderTests
     }
 
     [TestFixture]
+    [Category("Core")]
     public class GetLatestForApplicationWhenNoErrorsExistTests
     {
         private Mock<IErrorRepository> _mockErrorRepository;

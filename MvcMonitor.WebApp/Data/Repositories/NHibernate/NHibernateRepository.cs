@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using MvcMonitor.Models;
-using MvcMonitor.Utilities;
 using NHibernate;
 
-namespace MvcMonitor.Data.Repositories
+namespace MvcMonitor.Data.Repositories.NHibernate
 {
     public class NHibernateRepository : IErrorRepository
     {
@@ -15,7 +14,9 @@ namespace MvcMonitor.Data.Repositories
 
         public void Add(ErrorModel error)
         {
-            using (var session = NHibernateHelper.OpenSession())
+            ModelHelper.Truncate(error);
+
+            using (var session = SessionHelper.OpenSession())
             {
                 using (var transaction = session.BeginTransaction())
                 {
@@ -27,7 +28,7 @@ namespace MvcMonitor.Data.Repositories
 
         public IEnumerable<ErrorModel> Get(DateTime? @from, DateTime? to, string applicationName, string username, string location)
         {
-            using (var session = NHibernateHelper.OpenSession())
+            using (var session = SessionHelper.OpenSession())
             {
                 using (session.BeginTransaction())
                 {
@@ -64,7 +65,7 @@ namespace MvcMonitor.Data.Repositories
 
         public PagedList<ErrorModel> GetPaged(int skip, int take, DateTime? @from, DateTime? to, string applicationName, string username, string location)
         {
-            using (var session = NHibernateHelper.OpenSession())
+            using (var session = SessionHelper.OpenSession())
             {
                 using (session.BeginTransaction())
                 {

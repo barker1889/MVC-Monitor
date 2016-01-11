@@ -7,6 +7,8 @@ using NUnit.Framework;
 
 namespace MvcMonitor.Tests.Models
 {
+    [TestFixture]
+    [Category("Core")]
     public class ElmahErrorDtoFactoryTests
     {
         private string _encodedErrorParameter;

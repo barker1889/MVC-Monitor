@@ -9,6 +9,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.ErrorHubTests
 {
     [TestFixture]
+    [Category("Core")]
     public class GetErrorLocationsTests
     {
         private List<string> _applications;

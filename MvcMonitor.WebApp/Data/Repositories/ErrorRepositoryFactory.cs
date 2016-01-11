@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
 
 namespace MvcMonitor.Data.Repositories
 {
     public class ErrorRepositoryFactory : IErrorRepositoryFactory
     {
         private readonly string _repositoryType;
-        private readonly IEnumerable<Type> _availableRepos;
-
         private IErrorRepository _currentRepository;
 
         public ErrorRepositoryFactory()
@@ -20,24 +15,26 @@ namespace MvcMonitor.Data.Repositories
         public ErrorRepositoryFactory(string repositoryType)
         {
             _repositoryType = repositoryType;
-
-            _availableRepos = ErrorRepositoryLocator.GetErrorRepositories();
         }
 
         public IErrorRepository GetRepository()
         {
             if (_currentRepository == null)
             {
-                var matchingRepos =
-                    _availableRepos.Where(t => t.IsClass && t.FullName.EndsWith("." + _repositoryType)).ToList();
+                try
+                {
+                    Logger.Log.Debug(string.Format("Creating instance of {0}", MonitorConfiguration.ErrorRepository));
 
-                if (matchingRepos.Count() != 1)
-                    throw new ConfigurationErrorsException(
-                        string.Format("Could not find type '{0}' that implements IErrorRepository", _repositoryType));
-
-                var configuredRepository = Activator.CreateInstance(Type.GetType(matchingRepos[0].FullName));
-
-                _currentRepository = (IErrorRepository) configuredRepository;
+                    var configuredRepository = Activator.CreateInstance(Type.GetType(_repositoryType));
+                    _currentRepository = (IErrorRepository)configuredRepository;
+                }
+                catch (Exception exc)
+                {
+                    Logger.Log.Error(
+                        string.Format("Unable to create an instance of [{0}]. Ensure that the full name of the class is set in the 'ErrorRepository' app setting, that it has a default constructor and implements IErrorRepository", _repositoryType), 
+                        exc);
+                    throw;
+                }
             }
 
             return _currentRepository;

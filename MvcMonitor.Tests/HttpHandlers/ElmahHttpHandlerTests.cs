@@ -11,6 +11,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.HttpHandlers
 {
     [TestFixture]
+    [Category("Core")]
     public class ElmahHttpHandlerTests
     {
         private string _errorParameter;
@@ -67,6 +68,7 @@ namespace MvcMonitor.Tests.HttpHandlers
     }
 
     [TestFixture]
+    [Category("Core")]
     public class ElmahHttpHandlerWhenErrorIsNotInConfiguredApplicationsTests
     {
         private string _errorParameter;
