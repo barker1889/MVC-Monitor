@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using MvcMonitor.Data.Repositories;
+using MvcMonitor.Data.Repositories.NHibernate;
 using MvcMonitor.Models;
 using MvcMonitor.Utilities;
 using NUnit.Framework;
@@ -10,7 +11,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
 {
     [TestFixture]
-    [Ignore("Only required if using NHibernate Repository")]
+    [Category("NHibernateRepository")]
     public class GetTests
     {
         private readonly List<ErrorModel> _testDataErrors = new List<ErrorModel>();
@@ -34,7 +35,7 @@ namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
         {
             foreach (var error in _testDataErrors)
             {
-                using (var session = NHibernateHelper.OpenSession())
+                using (var session = SessionHelper.OpenSession())
                 {
                     using (var transaction = session.BeginTransaction())
                     {

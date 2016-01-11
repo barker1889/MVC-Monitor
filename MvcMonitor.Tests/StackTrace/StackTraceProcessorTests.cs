@@ -5,6 +5,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.StackTrace
 {
     [TestFixture]
+    [Category("Core")]
     public class StackTraceProcessorGetErrorLocationTests
     {
         private const string ERROR_STACK_TRACE =
@@ -29,6 +30,7 @@ namespace MvcMonitor.Tests.StackTrace
     }
 
     [TestFixture]
+    [Category("Core")]
     public class StackTraceProcessorGetErrorLocationsForMvcErrorTests
     {
         private const string ERROR_STACK_TRACE =

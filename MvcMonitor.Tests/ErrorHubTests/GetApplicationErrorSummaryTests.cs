@@ -10,6 +10,7 @@ using NUnit.Framework;
 namespace MvcMonitor.Tests.ErrorHubTests
 {
     [TestFixture]
+    [Category("Core")]
     public class GetApplicationErrorSummaryTests
     {
         private Mock<ISummaryProviderFactory> _mockSummaryProviderFactory;
