@@ -20,7 +20,7 @@
     <property name="ExceptionType" />
     <property name="ExceptionMessage" />
     <property name="ExceptionSource" />
-    <property name="ExceptionStackTrace" />
+    <property name="ExceptionStackTrace" type="string" length="1000000" />
     
     <property name="ServerName" />
     <property name="ServerPort" />

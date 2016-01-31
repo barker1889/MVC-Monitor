@@ -72,12 +72,6 @@ th {
     margin-right: 15px;
 }
 
-.column {
-    width: 370px;
-    float: left;
-    margin-left: 15px;
-}
-
 .column2 {
     width: 850px;
     float: left;
@@ -282,4 +276,8 @@ th {
 
 .panel-capital {
     text-transform: capitalize;
+}
+
+.error-table {
+    font-size: 2.5em;
 }

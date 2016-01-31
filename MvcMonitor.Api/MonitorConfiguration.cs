@@ -14,10 +14,10 @@ namespace MvcMonitor.Api
             try
             {
                 ApplicationStartTime = DateTime.Now;
-
                 Applications = GetConfiguredApplicationIds();
 
                 ErrorRepository = ConfigurationManager.AppSettings["ErrorRepository"];
+                EnableSignalrCrossDomain = bool.Parse(ConfigurationManager.AppSettings["EnableSignalrCrossDomain"]);
             }
             catch (Exception exc)
             {
@@ -43,5 +43,7 @@ namespace MvcMonitor.Api
         public static List<string> Applications { get; private set; }
 
         public static string ErrorRepository { get; private set; }
+
+        public static bool EnableSignalrCrossDomain { get; set; }
     }
 }

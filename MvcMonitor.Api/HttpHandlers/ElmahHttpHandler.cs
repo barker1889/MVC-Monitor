@@ -42,6 +42,8 @@ namespace MvcMonitor.Api.HttpHandlers
                 var errorDto = _elmahErrorDtoFactory.Create(errorId, sourceApplication, infoUrl, errorDetails);
 
                 _errorProcessor.ProcessElmahError(errorDto);    
+
+                Logger.Log.DebugFormat("Completed processing error {0} for {1}", errorId, sourceApplication);
             }
             catch (Exception exc)
             {
