@@ -154,7 +154,7 @@ namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
                 Assert.That(fromDb.Username, Is.EqualTo(error.Username.Substring(0, 200)));
                 Assert.That(fromDb.UserAgent, Is.EqualTo(error.UserAgent.Substring(0, 600)));
 
-                // session.Delete(fromDb);
+                session.Delete(fromDb);
             }
         }
     }
@@ -229,7 +229,7 @@ namespace MvcMonitor.Tests.Repositories.NHibernateRepositoryTests
                 Assert.That(fromDb.Username, Is.EqualTo(error.Username));
                 Assert.That(fromDb.UserAgent, Is.EqualTo(error.UserAgent));
 
-                // session.Delete(fromDb);
+                session.Delete(fromDb);
             }
         }
     }
