@@ -4,7 +4,7 @@
     <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
     <property name="dialect">NHibernate.Dialect.MsSql2012Dialect</property>
     <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
-    <property name="connection.connection_string">Data Source=.;Database=MvcMonitor;Integrated Security=True</property>
+    <property name="connection.connection_string">Data Source=.;Database=AppsMonitor;Integrated Security=True</property>
     <property name="show_sql">true</property>
   </session-factory>
 </hibernate-configuration>
